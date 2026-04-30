@@ -19,14 +19,16 @@
 <body>
 <div class="container">    
     <header>
-        <h1>Michael Myers</h1>
-        <p class="destaque">Estudante de Desenvolvimento de Sistemas – SENAC Rio Claro</p>
-        <nav>
-            <a href="#sobre">Sobre</a> |
-            <a href="#habilidades">Habilidades</a> |
-            <a href="#favoritos">Favoritos</a> |
-            <a href="#contato">Contato</a>
-        </nav>
+        <div class="container">
+            <h1>Michael Myers</h1>
+            <p class="destaque">Estudante de Desenvolvimento de Sistemas – SENAC Rio Claro</p>
+            <nav>
+                <a href="#sobre">Sobre</a> |
+                <a href="#habilidades">Habilidades</a> |
+                <a href="#favoritos">Favoritos</a> |
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>    
     </header>
 
     <main>
@@ -40,11 +42,35 @@
 
         <section id="habilidades">
             <h2>Habilidades</h2>
-            <ul>
+            <ul class="lista-habilidades">
                 <li>HTML5</li>
                 <li>CSS3 (aprendendo)</li>
                 <li>JavaScript (em breve)</li>
             </ul>
+        </section>
+
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <div class="cards-projetos">
+                <article class="card-projeto destaque">
+                    <h3>Projeto 1</h3>
+                    <p>Descrição breve do que é esse projeto, o que ele faz e quais
+                        tecnologias foram usadas.</p>
+                    <a href="#" target="_blank">Ver projeto</a>
+                </article>
+                <article class="card-projeto">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição breve do que é esse projeto, o que ele faz e quais
+                        tecnologias foram usadas.</p>
+                    <a href="#" target="_blank">Ver projeto</a>
+                </article>
+                <article class="card-projeto">
+                    <h3>Projeto 3</h3>
+                    <p>Descrição breve do que é esse projeto, o que ele faz e quais
+                        tecnologias foram usadas.</p>
+                    <a href="#" target="_blank">Ver projeto</a>
+                </article>
+            </div>
         </section>
 
         <section id="favoritos">

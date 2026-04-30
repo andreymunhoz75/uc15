@@ -1,0 +1,107 @@
+body { 
+  font-family: 'Poppins', sans-serif; 
+} 
+ 
+/* Navbar com gradiente personalizado */ 
+.navbar { 
+  background: linear-gradient(90deg, #1f4e79 0%, #6610f2 100%) !important; 
+} 
+ 
+/* Hero com fundo escuro personalizado */ 
+.bg-hero { 
+  background: linear-gradient(135deg, #0d0d1a 0%, #1a1030 60%, #6610f2 100%); 
+  min-height: 500px; 
+} 
+ 
+/* Cards com hover suave e sombra roxa */ 
+.card { 
+  transition: transform 0.25s ease, box-shadow 0.25s ease; 
+  border: none; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+  height: 100%;
+} 
+.card:hover { 
+  transform: translateY(-8px); 
+  box-shadow: 0 15px 35px rgba(102, 16, 242, 0.25); 
+} 
+
+/* Padronização das imagens nos cards */
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+ 
+/* Botao primario com a cor do projeto */ 
+.btn-primary { 
+  background-color: #6610f2; 
+  border-color: #6610f2; 
+} 
+.btn-primary:hover { 
+  background-color: #5200cc; 
+  border-color: #5200cc; 
+} 
+ 
+/* Scrollbar personalizado */ 
+::-webkit-scrollbar       { width: 8px; } 
+::-webkit-scrollbar-track { background: #f4f0ff; } 
+::-webkit-scrollbar-thumb { background: #7952b3; border-radius: 4px; } 
+::-webkit-scrollbar-thumb:hover { background: #6610f2; } 
+ 
+/* Scroll suave ao clicar nos links da navbar */ 
+html { scroll-behavior: smooth; }
+
+/* Botão de Menu Fixo (segue a página) */
+.btn-fixed-menu {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1050;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6610F2 0%, #7952B3 100%);
+  border: none;
+  color: white;
+  box-shadow: 0 8px 25px rgba(102, 16, 242, 0.4);
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+}
+.btn-fixed-menu:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 35px rgba(102, 16, 242, 0.6);
+  color: #fff;
+}
+
+/* Offcanvas Estilizado (Informações de acordo com o design) */
+.offcanvas {
+  background: linear-gradient(180deg, #0D0D1A 0%, #1A1030 100%);
+  color: white;
+  border-right: 1px solid rgba(102, 16, 242, 0.3);
+}
+.offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.offcanvas .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+.offcanvas .list-group-item {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 1rem 1.5rem;
+  transition: all 0.2s ease;
+}
+.offcanvas .list-group-item:hover {
+  background: rgba(102, 16, 242, 0.15);
+  color: #6610F2;
+  padding-left: 2rem;
+}
+.offcanvas .list-group-item a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+}

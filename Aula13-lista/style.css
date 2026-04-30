@@ -1,0 +1,55 @@
+/* Importação da fonte Google Fonts: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Customização 1: Estilo próprio para cada <li> da lista */
+.task-item {
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eaeaea;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Para evitar que a checkbox fique distorcida ou fora de alinhamento */
+.form-check-input {
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+}
+
+/* Customização 2: Hover nos botões com transition suave */
+button {
+    transition: all 0.3s ease !important;
+}
+
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Customização 3: Classe .concluida aplicando text-decoration: line-through no <span> de texto */
+.concluida span.task-text {
+    text-decoration: line-through;
+    color: #a0a0a0;
+}
+
+/* Efeito visual extra para indicar que a tarefa inteira está concluída */
+.concluida {
+    background-color: #f8f9fa !important;
+    opacity: 0.8;
+}

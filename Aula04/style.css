@@ -145,11 +145,26 @@ img {
 }
 
 .foto-perfil {
+  grid-area: foto;
   border-radius: 50%;
   width: 120px;
   height: 120px;
   object-fit: cover;
   border: 3px solid var(--cor-secundaria);
+  
+}
+
+  .hero h2 {
+  grid-area: titulo;
+  color: var(--cor-branco); /* visivel sobre o banner */
+  margin-bottom: 0;
+  align-self: end;
+}
+
+  .hero p {
+ grid-area: descricao;
+ color: var(--cor-branco);
+ align-self: start;
 }
 
 /* ============================================
@@ -174,13 +189,6 @@ textarea:focus {
 }
 
 /* ============================================
-   LISTAS
-   ============================================ */
-ul li:nth-child(odd) {
-  background-color: #f9f9f9;
-}
-
-/* ============================================
    FOOTER
    ============================================ */
 footer {
@@ -196,15 +204,15 @@ footer p {
 }
 
 .hero { 
-  background-image: url('image/Halloween-Kills-ends-913.jpg'); 
-  background-size: cover;
-  background-position: center; 
-  background-repeat: no-repeat; 
-  min-height: 300px; 
-  display: flex; 
-  align-items: center; 
-  padding: 48px 32px; 
-  border-radius: var(--raio-borda); 
+  background-image: url('image/Halloween-Kills-ends-913.jpg');
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+  "foto titulo "
+  "foto descricao";
+  gap: 1rem 2rem;
+  align-items: center;
+  
 }  
 
 header { 
@@ -267,3 +275,150 @@ textarea::placeholder {
   color: #AAAAAA; 
   font-style: italic; 
 } 
+
+header nav {
+ display: flex;
+ margin-top: 12px;
+ flex-direction: row;
+}
+
+header nav {
+ display: flex;
+ margin-top: 12px;
+}
+
+.lista-habilidades {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 12px;
+ list-style: none;
+ padding: 0;
+}
+
+.lista-habilidades li {
+ background-color: var(--cor-secundaria);
+ color: var(--cor-branco);
+ padding: 6px 16px;
+ border-radius: 20px;
+ font-size: 0.875rem;
+ font-weight: 600;
+}
+
+.cards-projetos {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+ gap: 2rem
+}
+.card-projeto {
+ background-color: var(--cor-branco);
+ border-radius: var(--raio-borda);
+ box-shadow: var(--sombra-card);
+ padding: 24px;
+ display: flex;
+ flex-direction: column;
+ transition: var(--transicao);
+}
+.card-projeto:hover {
+ transform: translateY(-4px);
+ box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+.card-projeto h3 {
+ color: var(--cor-primaria);
+ margin-bottom: 8px;
+}
+.card-projeto p {
+ flex-grow: 1;
+ color: var(--cor-texto);
+ font-size: 0.9rem;
+}
+.card-projeto a {
+ display: inline-block;
+ margin-top: 16px;
+ padding: 8px 16px;
+ background-color: var(--cor-secundaria);
+ color: var(--cor-branco);
+ border-radius: var(--raio-borda);
+ text-decoration: none;
+ font-size: 0.875rem;
+ font-weight: 600;
+ transition: var(--transicao);
+}
+.card-projeto a:hover {
+ background-color: var(--cor-acento);
+}
+
+.card-projeto.destaque{
+  grid-column: span 2;
+}
+
+
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+  }
+
+  .cards-projetos {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .card-projeto.destaque {
+    grid-column: span 1;
+  }
+}
+
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "foto"
+      "titulo"
+      "descricao";
+    text-align: center;
+  }
+
+  .foto-perfil {
+    margin: 0 auto;
+  }
+
+ 
+  header nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  header nav a {
+    text-align: center;
+  }
+
+  
+  .cards-projetos {
+    grid-template-columns: 1fr;
+  }
+
+  .card-projeto.destaque {
+    grid-column: span 1;
+  }
+
+  section {
+    padding: 20px 16px;
+  }
+
+  
+  input,
+  textarea,
+  select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
