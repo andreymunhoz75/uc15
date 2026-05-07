@@ -1,0 +1,55 @@
+/* Importando a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Regras gerais e tipografia */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Requisito 01 - Header estilizado */
+.evento-header {
+    background-color: #1F4E79; /* Azul escuro do tema */
+    color: #ffffff;
+    border-bottom: 6px solid #E05C00; /* Laranja do tema */
+}
+
+.tagline {
+    color: #e2e8f0;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+/* Botão Principal com animação */
+.btn-principal {
+    background-color: #E05C00; /* Laranja */
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-principal:hover:not(:disabled) {
+    background-color: #c24f00; /* Laranja escurecido */
+    transform: translateY(-2px); /* Efeito de elevação */
+    color: #ffffff;
+}
+
+.btn-principal:disabled {
+    background-color: #e05d00a8;
+    color: #f1f1f1;
+    cursor: not-allowed;
+}
+
+/* Seção de Contador (Requisito 06) */
+.secao-inscricoes {
+    background-color: #ffffff;
+    border-left: 6px solid #1F4E79; /* Detalhe azul escuro */
+}
+
+/* Estilo do Modal (Requisito 05) */
+.header-modal {
+    background-color: #1F4E79;
+    color: #ffffff;
+}
