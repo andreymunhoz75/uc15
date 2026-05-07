@@ -1,0 +1,91 @@
+/* 1. Importando a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Aplicando a fonte no body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fa; /* Fundo claro para contrastar com os cards */
+}
+
+/* 2. Alterar a cor de fundo dos cards e cor do texto */
+.custom-card {
+    background-color: #1F4E79; /* Azul escuro especificado */
+    color: #ffffff; /* Texto branco */
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para o card */
+}
+
+/* Ajustes nos inputs e selects para harmonizar com o fundo escuro (opcional) */
+.custom-card label {
+    font-weight: 500;
+}
+
+/* 3. Transition e transform:scale no hover dos botões "Converter" */
+.btn-converter {
+    color: #1F4E79;
+    font-weight: 600;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-converter:hover {
+    transform: scale(1.05);
+    background-color: #e2e6ea;
+}
+
+/* 4. Estilizar o display de resultado */
+.resultado-display {
+    background-color: #f39c12; /* Cor de destaque (laranja/amarelo) */
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-all;
+}
+
+/* 5. Estilizar a seção de histórico (#historicoLista) */
+.historico-section {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid #1F4E79; /* Borda de destaque superior */
+}
+
+.historico-section h2 {
+    color: #1F4E79;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Resetando a margem e padding padrão da lista (ul) */
+#historicoLista {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilizando cada item do histórico (li) */
+#historicoLista li {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #495057;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    border-left: 4px solid #1F4E79; /* Borda esquerda de destaque em cada item */
+}
+
+#historicoLista li:hover {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Unidades</title>
+    <!-- Bootstrap CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-5 fw-bold text-dark">Conversor Múltiplo</h1>
+        
+        <div class="row g-4">
+            <!-- Card 1: Temperatura -->
+            <div class="col-md-4">
+                <div class="card h-100 custom-card">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center mb-4">Temperatura</h5>
+                        <div class="mb-3">
+                            <label for="tempInput" class="form-label">Valor</label>
+                            <input type="number" class="form-control" id="tempInput" placeholder="Digite o valor">
+                        </div>
+                        <div class="mb-3">
+                            <label for="tempDe" class="form-label">De</label>
+                            <select class="form-select" id="tempDe">
+                                <option value="Celsius">Celsius</option>
+                                <option value="Fahrenheit">Fahrenheit</option>
+                                <option value="Kelvin">Kelvin</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="tempPara" class="form-label">Para</label>
+                            <select class="form-select" id="tempPara">
+                                <option value="Fahrenheit">Fahrenheit</option>
+                                <option value="Celsius">Celsius</option>
+                                <option value="Kelvin">Kelvin</option>
+                            </select>
+                        </div>
+                        <div class="mt-auto">
+                            <button class="btn btn-light w-100 mb-3 btn-converter" id="tempBtn">Converter</button>
+                            <div class="resultado-display" id="tempResultado">Resultado</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Moeda -->
+            <div class="col-md-4">
+                <div class="card h-100 custom-card">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center mb-4">Moeda</h5>
+                        <div class="mb-3">
+                            <label for="moedaInput" class="form-label">Valor</label>
+                            <input type="number" class="form-control" id="moedaInput" placeholder="Digite o valor">
+                        </div>
+                        <div class="mb-3">
+                            <label for="moedaDe" class="form-label">De</label>
+                            <select class="form-select" id="moedaDe">
+                                <option value="BRL">BRL</option>
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="moedaPara" class="form-label">Para</label>
+                            <select class="form-select" id="moedaPara">
+                                <option value="USD">USD</option>
+                                <option value="BRL">BRL</option>
+                                <option value="EUR">EUR</option>
+                            </select>
+                        </div>
+                        <div class="mt-auto">
+                            <button class="btn btn-light w-100 mb-3 btn-converter" id="moedaBtn">Converter</button>
+                            <div class="resultado-display" id="moedaResultado">Resultado</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Comprimento -->
+            <div class="col-md-4">
+                <div class="card h-100 custom-card">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center mb-4">Comprimento</h5>
+                        <div class="mb-3">
+                            <label for="compInput" class="form-label">Valor</label>
+                            <input type="number" class="form-control" id="compInput" placeholder="Digite o valor">
+                        </div>
+                        <div class="mb-3">
+                            <label for="compDe" class="form-label">De</label>
+                            <select class="form-select" id="compDe">
+                                <option value="m">Metros (m)</option>
+                                <option value="cm">Centímetros (cm)</option>
+                                <option value="km">Quilômetros (km)</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="compPara" class="form-label">Para</label>
+                            <select class="form-select" id="compPara">
+                                <option value="cm">Centímetros (cm)</option>
+                                <option value="m">Metros (m)</option>
+                                <option value="km">Quilômetros (km)</option>
+                            </select>
+                        </div>
+                        <div class="mt-auto">
+                            <button class="btn btn-light w-100 mb-3 btn-converter" id="compBtn">Converter</button>
+                            <div class="resultado-display" id="compResultado">Resultado</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção Histórico -->
+        <div class="historico-section mt-5">
+            <h2>Histórico</h2>
+            <ul id="historicoLista"></ul>
+        </div>
+    </div>
+
+    <!-- Script Vanilla JS -->
+    <script src="script.js"></script>
+</body>
+</html>

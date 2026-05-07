@@ -1,0 +1,65 @@
+/* Importando fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+}
+
+/* Estilização dos cards de conversores (azul #1F4E79 conforme sugerido) */
+.converter-card {
+    background-color: #1F4E79;
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
+
+/* Transição e scale no hover dos botões "Converter" */
+.btn-converter {
+    color: #1F4E79;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-converter:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Estilo para a div de resultado com cor de destaque e padding */
+.resultado-display {
+    min-height: 48px;
+    padding: 12px;
+    background-color: #ffc107; /* Cor de destaque amarela */
+    color: #212529;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para a seção de histórico com bordas e espaçamento */
+.historico-section {
+    background-color: #ffffff;
+    border: 2px solid #1F4E79;
+}
+
+.historico-section h2 {
+    color: #1F4E79;
+    font-weight: 700;
+}
+
+/* Estilização da lista de histórico */
+#historicoLista li {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 8px;
+    background-color: #f8f9fa;
+    border-left: 5px solid #1F4E79;
+    border-radius: 4px;
+    font-size: 1.05rem;
+}
+
+#historicoLista li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}

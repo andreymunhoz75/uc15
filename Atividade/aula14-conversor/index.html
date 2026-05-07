@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversores Múltiplos</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS (deve vir depois do Bootstrap para sobrescrever estilos) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-5">Sistema de Conversões</h1>
+        
+        <div class="row g-4">
+            <!-- Card 1: Conversor de Temperatura -->
+            <div class="col-md-4">
+                <div class="card h-100 p-4 converter-card shadow">
+                    <h3 class="text-center mb-4">Temperatura</h3>
+                    <div class="mb-3">
+                        <label for="tempInput" class="form-label">Valor:</label>
+                        <input type="number" id="tempInput" class="form-control" placeholder="Digite o valor">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tempDe" class="form-label">De:</label>
+                        <select id="tempDe" class="form-select">
+                            <option value="celsius">Celsius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="kelvin">Kelvin</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="tempPara" class="form-label">Para:</label>
+                        <select id="tempPara" class="form-select">
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="celsius">Celsius</option>
+                            <option value="kelvin">Kelvin</option>
+                        </select>
+                    </div>
+                    <button id="tempBtn" class="btn btn-light fw-bold w-100 mb-4 btn-converter">Converter</button>
+                    <div id="tempResultado" class="resultado-display text-center rounded fw-bold"></div>
+                </div>
+            </div>
+
+            <!-- Card 2: Conversor de Moeda -->
+            <div class="col-md-4">
+                <div class="card h-100 p-4 converter-card shadow">
+                    <h3 class="text-center mb-4">Moeda</h3>
+                    <div class="mb-3">
+                        <label for="moedaInput" class="form-label">Valor:</label>
+                        <input type="number" id="moedaInput" class="form-control" placeholder="Digite o valor">
+                    </div>
+                    <div class="mb-3">
+                        <label for="moedaDe" class="form-label">De:</label>
+                        <select id="moedaDe" class="form-select">
+                            <option value="BRL">BRL (Real)</option>
+                            <option value="USD">USD (Dólar)</option>
+                            <option value="EUR">EUR (Euro)</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="moedaPara" class="form-label">Para:</label>
+                        <select id="moedaPara" class="form-select">
+                            <option value="USD">USD (Dólar)</option>
+                            <option value="BRL">BRL (Real)</option>
+                            <option value="EUR">EUR (Euro)</option>
+                        </select>
+                    </div>
+                    <button id="moedaBtn" class="btn btn-light fw-bold w-100 mb-4 btn-converter">Converter</button>
+                    <div id="moedaResultado" class="resultado-display text-center rounded fw-bold"></div>
+                </div>
+            </div>
+
+            <!-- Card 3: Conversor de Comprimento (NOVO) -->
+            <div class="col-md-4">
+                <div class="card h-100 p-4 converter-card shadow">
+                    <h3 class="text-center mb-4">Comprimento</h3>
+                    <div class="mb-3">
+                        <label for="compInput" class="form-label">Valor:</label>
+                        <input type="number" id="compInput" class="form-control" placeholder="Digite o valor">
+                    </div>
+                    <div class="mb-3">
+                        <label for="compDe" class="form-label">De:</label>
+                        <select id="compDe" class="form-select">
+                            <option value="m">Metro (m)</option>
+                            <option value="cm">Centímetro (cm)</option>
+                            <option value="km">Quilômetro (km)</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="compPara" class="form-label">Para:</label>
+                        <select id="compPara" class="form-select">
+                            <option value="cm">Centímetro (cm)</option>
+                            <option value="m">Metro (m)</option>
+                            <option value="km">Quilômetro (km)</option>
+                        </select>
+                    </div>
+                    <button id="compBtn" class="btn btn-light fw-bold w-100 mb-4 btn-converter">Converter</button>
+                    <div id="compResultado" class="resultado-display text-center rounded fw-bold"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Histórico -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="historico-section p-4 rounded shadow-sm">
+                    <h2 class="mb-4 text-center">Histórico</h2>
+                    <!-- Lista vazia onde os itens de histórico serão inseridos via JS -->
+                    <ul id="historicoLista" class="list-unstyled mb-0"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
+</body>
+</html>
